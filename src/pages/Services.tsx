@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FileText, Users, Clipboard, PenTool, ArrowRight, Search, BarChart, PresentationChart } from 'lucide-react';
+import { FileText, Users, Clipboard, PenTool, ArrowRight, Search, BarChart, Presentation } from 'lucide-react';
 
 const Services = () => {
   const location = useLocation();
@@ -110,7 +110,7 @@ const Services = () => {
       id: 'agile-consultation',
       title: 'Agile Consultation & Presentations',
       description: 'Beyond retrospectives, we offer comprehensive agile consulting services to help your organization embrace agile principles more effectively. From workshops to executive briefings, we provide the expertise to support your agile transformation.',
-      icon: <PresentationChart size={32} className="text-primary" />,
+      icon: <Presentation size={32} className="text-primary" />,
       features: [
         'Customized agile training workshops',
         'Team coaching and mentoring',

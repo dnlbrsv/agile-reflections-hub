@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -10,15 +10,17 @@ interface ServiceCardProps {
   icon: React.ReactNode;
   link: string;
   className?: string;
+  style?: CSSProperties;
 }
 
-const ServiceCard = ({ title, description, icon, link, className }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, icon, link, className, style }: ServiceCardProps) => {
   return (
     <div 
       className={cn(
         "bg-white/70 backdrop-blur-md border border-border/50 rounded-2xl p-6 shadow-subtle transition-all duration-300 hover:shadow-medium group",
         className
       )}
+      style={style}
     >
       <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
         {icon}
